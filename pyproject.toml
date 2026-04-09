@@ -1,7 +1,7 @@
 [project]
 name = "elege"
 version = "0.1.0"
-description = "Add your description here"
+description = "Brazilian voter tool for 2026 elections"
 readme = "README.md"
 requires-python = ">=3.13"
 dependencies = [
@@ -9,4 +9,31 @@ dependencies = [
     "django-rest-framework>=0.1.0",
     "psycopg>=3.3.3",
     "python-dotenv>=1.2.2",
+    "requests>=2.33.1",
 ]
+
+[dependency-groups]
+dev = [
+    "black>=26.3.1",
+    "pytest>=9.0.3",
+    "pytest-django>=4.12.0",
+    "ruff>=0.15.10",
+    "vcrpy>=8.1.1",
+]
+
+[tool.pytest.ini_options]
+DJANGO_SETTINGS_MODULE = "config.settings"
+pythonpath = ["."]
+
+[tool.black]
+line-length = 88
+target-version = ["py313"]
+
+[tool.ruff]
+line-length = 88
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP"]
+
+[tool.ruff.lint.per-file-ignores]
+"config/settings.py" = ["E501"]

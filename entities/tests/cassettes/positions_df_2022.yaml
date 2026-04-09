@@ -1,0 +1,55 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.33.1
+    method: GET
+    uri: https://divulgacandcontas.tse.jus.br/divulga/rest/v1/eleicao/listar/municipios/2040602022/DF/cargos
+  response:
+    body:
+      string: "{\"unidadeEleitoralDTO\":{\"id\":null,\"sigla\":\"DF\",\"nome\":\"DISTRITO
+        FEDERAL\",\"regiao\":null,\"cargos\":null,\"diretorios\":null,\"codigo\":\"DF\",\"capital\":false,\"estado\":\"BRASIL\"},\"cargos\":[{\"codigo\":3,\"sigla\":null,\"nome\":\"Governador\",\"codSuperior\":0,\"titular\":false,\"contagem\":12},{\"codigo\":4,\"sigla\":null,\"nome\":\"Vice-governador\",\"codSuperior\":0,\"titular\":false,\"contagem\":13},{\"codigo\":5,\"sigla\":null,\"nome\":\"Senador\",\"codSuperior\":0,\"titular\":false,\"contagem\":13},{\"codigo\":6,\"sigla\":null,\"nome\":\"Deputado
+        Federal\",\"codSuperior\":0,\"titular\":false,\"contagem\":215},{\"codigo\":8,\"sigla\":null,\"nome\":\"Deputado
+        Distrital\",\"codSuperior\":0,\"titular\":false,\"contagem\":608},{\"codigo\":9,\"sigla\":null,\"nome\":\"1\xBA
+        Suplente\",\"codSuperior\":0,\"titular\":false,\"contagem\":15},{\"codigo\":10,\"sigla\":null,\"nome\":\"2\xBA
+        Suplente\",\"codSuperior\":0,\"titular\":false,\"contagem\":16}]}"
+    headers:
+      Content-Security-Policy:
+      - 'default-src https:; script-src https: ''unsafe-inline'' ''unsafe-eval'';
+        img-src https: data: blob:; font-src https: data:; style-src https: ''unsafe-inline'';
+        frame-ancestors https://*.tre-ap.jus.br https://*.tse.jus.br https://*.tre-sp.jus.br;'
+      Content-Type:
+      - application/json
+      Date:
+      - Thu, 09 Apr 2026 20:30:16 GMT
+      Referrer-Policy:
+      - strict-origin
+      Set-Cookie:
+      - _d8a23=c2e18173594a2b36; Path=/
+      - TS017cf7a1=0103a0ceaeaafb6c5f36f88fffef7e7215556ebf978cd1dc0aa046822419a9df5792bee59b2df95f732296ab25430b368c44f579d9fc7a553903e6b143ac2f456d80b2326d;
+        Path=/; Secure; HttpOnly
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding
+      X-Content-Type-Options:
+      - nosniff
+      X-Permitted-Cross-Domain-Policies:
+      - master only
+      X-XSS-Protection:
+      - 1; mode=block
+      content-length:
+      - '846'
+    status:
+      code: 200
+      message: OK
+version: 1

@@ -1,0 +1,60 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.33.1
+    method: GET
+    uri: https://dadosabertos.camara.leg.br/api/v2/deputados?ordem=ASC&ordenarPor=nome&itens=100&siglaUf=DF&idLegislatura=57
+  response:
+    body:
+      string: '{"dados":[{"id":73579,"uri":"https://dadosabertos.camara.leg.br/api/v2/deputados/73579","nome":"Alberto
+        Fraga","siglaPartido":"PL","uriPartido":"https://dadosabertos.camara.leg.br/api/v2/partidos/37906","siglaUf":"DF","idLegislatura":57,"urlFoto":"https://www.camara.leg.br/internet/deputado/bandep/73579.jpg","email":"dep.albertofraga@camara.leg.br"},{"id":204374,"uri":"https://dadosabertos.camara.leg.br/api/v2/deputados/204374","nome":"Bia
+        Kicis","siglaPartido":"PL","uriPartido":"https://dadosabertos.camara.leg.br/api/v2/partidos/37906","siglaUf":"DF","idLegislatura":57,"urlFoto":"https://www.camara.leg.br/internet/deputado/bandep/204374.jpg","email":"dep.biakicis@camara.leg.br"},{"id":160575,"uri":"https://dadosabertos.camara.leg.br/api/v2/deputados/160575","nome":"Erika
+        Kokay","siglaPartido":"PT","uriPartido":"https://dadosabertos.camara.leg.br/api/v2/partidos/36844","siglaUf":"DF","idLegislatura":57,"urlFoto":"https://www.camara.leg.br/internet/deputado/bandep/160575.jpg","email":"dep.erikakokay@camara.leg.br"},{"id":220534,"uri":"https://dadosabertos.camara.leg.br/api/v2/deputados/220534","nome":"Fred
+        Linhares","siglaPartido":"REPUBLICANOS","uriPartido":"https://dadosabertos.camara.leg.br/api/v2/partidos/37908","siglaUf":"DF","idLegislatura":57,"urlFoto":"https://www.camara.leg.br/internet/deputado/bandep/220534.jpg","email":"dep.fredlinhares@camara.leg.br"},{"id":220531,"uri":"https://dadosabertos.camara.leg.br/api/v2/deputados/220531","nome":"Gilvan
+        Maximo","siglaPartido":"REPUBLICANOS","uriPartido":"https://dadosabertos.camara.leg.br/api/v2/partidos/37908","siglaUf":"DF","idLegislatura":57,"urlFoto":"https://www.camara.leg.br/internet/deputado/bandep/220531.jpg","email":null},{"id":204372,"uri":"https://dadosabertos.camara.leg.br/api/v2/deputados/204372","nome":"Julio
+        Cesar Ribeiro","siglaPartido":"REPUBLICANOS","uriPartido":"https://dadosabertos.camara.leg.br/api/v2/partidos/37908","siglaUf":"DF","idLegislatura":57,"urlFoto":"https://www.camara.leg.br/internet/deputado/bandep/204372.jpg","email":"dep.juliocesarribeiro@camara.leg.br"},{"id":89536,"uri":"https://dadosabertos.camara.leg.br/api/v2/deputados/89536","nome":"Prof.
+        Paulo Fernando","siglaPartido":"REPUBLICANOS","uriPartido":"https://dadosabertos.camara.leg.br/api/v2/partidos/37908","siglaUf":"DF","idLegislatura":57,"urlFoto":"https://www.camara.leg.br/internet/deputado/bandep/89536.jpg","email":null},{"id":220533,"uri":"https://dadosabertos.camara.leg.br/api/v2/deputados/220533","nome":"Prof.
+        Reginaldo Veras","siglaPartido":"PV","uriPartido":"https://dadosabertos.camara.leg.br/api/v2/partidos/36851","siglaUf":"DF","idLegislatura":57,"urlFoto":"https://www.camara.leg.br/internet/deputado/bandep/220533.jpg","email":"dep.prof.reginaldoveras@camara.leg.br"},{"id":220532,"uri":"https://dadosabertos.camara.leg.br/api/v2/deputados/220532","nome":"Rafael
+        Prudente","siglaPartido":"MDB","uriPartido":"https://dadosabertos.camara.leg.br/api/v2/partidos/36899","siglaUf":"DF","idLegislatura":57,"urlFoto":"https://www.camara.leg.br/internet/deputado/bandep/220532.jpg","email":"dep.rafaelprudente@camara.leg.br"},{"id":141533,"uri":"https://dadosabertos.camara.leg.br/api/v2/deputados/141533","nome":"Rodrigo
+        Rollemberg","siglaPartido":"PSB","uriPartido":"https://dadosabertos.camara.leg.br/api/v2/partidos/36832","siglaUf":"DF","idLegislatura":57,"urlFoto":"https://www.camara.leg.br/internet/deputado/bandep/141533.jpg","email":"dep.rodrigorollemberg@camara.leg.br"}],"links":[{"rel":"self","href":"https://dadosabertos.camara.leg.br/api/v2/deputados?ordem=ASC&ordenarPor=nome&itens=100&siglaUf=DF&idLegislatura=57"},{"rel":"first","href":"https://dadosabertos.camara.leg.br/api/v2/deputados?ordem=ASC&ordenarPor=nome&siglaUf=DF&idLegislatura=57&pagina=1&itens=100"},{"rel":"last","href":"https://dadosabertos.camara.leg.br/api/v2/deputados?ordem=ASC&ordenarPor=nome&siglaUf=DF&idLegislatura=57&pagina=1&itens=100"}]}'
+    headers:
+      access-control-expose-headers:
+      - Link, X-Total-Count, X-Validation-Error
+      cache-control:
+      - public, max-age=1800
+      content-length:
+      - '3925'
+      content-type:
+      - application/json
+      date:
+      - Thu, 09 Apr 2026 20:30:25 GMT
+      link:
+      - <https://dadosabertos.camara.leg.br/api/v2/deputados?ordem=ASC&ordenarPor=nome&itens=100&siglaUf=DF&idLegislatura=57>;
+        rel="self",<https://dadosabertos.camara.leg.br/api/v2/deputados?ordem=ASC&ordenarPor=nome&siglaUf=DF&idLegislatura=57&pagina=1&itens=100>;
+        rel="first",<https://dadosabertos.camara.leg.br/api/v2/deputados?ordem=ASC&ordenarPor=nome&siglaUf=DF&idLegislatura=57&pagina=1&itens=100>;
+        rel="last",
+      retry-after:
+      - '30'
+      server:
+      - envoy
+      transfer-encoding:
+      - chunked
+      vary:
+      - Origin,Access-Control-Request-Method,Access-Control-Request-Headers,Accept,
+        Accept-Encoding
+      x-envoy-upstream-service-time:
+      - '7236'
+      x-total-count:
+      - '10'
+    status:
+      code: 200
+      message: OK
+version: 1

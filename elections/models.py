@@ -5,6 +5,7 @@ class Election(models.Model):
     year = models.PositiveSmallIntegerField()
     round = models.PositiveSmallIntegerField(default=1)
     description = models.CharField(max_length=200, blank=True)
+    tse_election_id = models.BigIntegerField(null=True, blank=True, db_index=True)
 
     class Meta:
         unique_together = ("year", "round")

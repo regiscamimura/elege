@@ -1,0 +1,62 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.33.1
+    method: GET
+    uri: https://divulgacandcontas.tse.jus.br/divulga/rest/v1/eleicao/ordinarias
+  response:
+    body:
+      string: "[{\"id\":2045202024,\"siglaUF\":null,\"localidadeSgUe\":null,\"ano\":2024,\"codigo\":null,\"nomeEleicao\":\"Elei\xE7\xF5es
+        Municipais 2024\",\"tipoEleicao\":\"O\",\"turno\":null,\"tipoAbrangencia\":\"M\",\"dataEleicao\":\"2024-10-06\",\"codSituacaoEleicao\":null,\"descricaoSituacaoEleicao\":null,\"descricaoEleicao\":\"2024\"},{\"id\":2040602022,\"siglaUF\":null,\"localidadeSgUe\":null,\"ano\":2022,\"codigo\":null,\"nomeEleicao\":\"Elei\xE7\xE3o
+        Geral Federal 2022\",\"tipoEleicao\":\"O\",\"turno\":null,\"tipoAbrangencia\":\"F\",\"dataEleicao\":\"2022-10-02\",\"codSituacaoEleicao\":null,\"descricaoSituacaoEleicao\":null,\"descricaoEleicao\":\"2022\"},{\"id\":2032002020,\"siglaUF\":null,\"localidadeSgUe\":null,\"ano\":2020,\"codigo\":null,\"nomeEleicao\":\"Elei\xE7\xF5es
+        Municipais 2020 - AP\",\"tipoEleicao\":\"O\",\"turno\":null,\"tipoAbrangencia\":\"M\",\"dataEleicao\":\"2020-11-14\",\"codSituacaoEleicao\":null,\"descricaoSituacaoEleicao\":null,\"descricaoEleicao\":\"2020\"},{\"id\":2030402020,\"siglaUF\":null,\"localidadeSgUe\":null,\"ano\":2020,\"codigo\":null,\"nomeEleicao\":\"Elei\xE7\xF5es
+        Municipais 2020\",\"tipoEleicao\":\"O\",\"turno\":null,\"tipoAbrangencia\":\"M\",\"dataEleicao\":\"2020-11-15\",\"codSituacaoEleicao\":null,\"descricaoSituacaoEleicao\":null,\"descricaoEleicao\":\"2020\"},{\"id\":2022802018,\"siglaUF\":null,\"localidadeSgUe\":null,\"ano\":2018,\"codigo\":null,\"nomeEleicao\":\"Elei\xE7\xE3o
+        Geral Federal 2018\",\"tipoEleicao\":\"O\",\"turno\":null,\"tipoAbrangencia\":\"F\",\"dataEleicao\":\"2018-10-07\",\"codSituacaoEleicao\":null,\"descricaoSituacaoEleicao\":null,\"descricaoEleicao\":\"2018\"},{\"id\":2,\"siglaUF\":null,\"localidadeSgUe\":null,\"ano\":2016,\"codigo\":null,\"nomeEleicao\":\"Elei\xE7\xF5es
+        Municipais 2016\",\"tipoEleicao\":\"O\",\"turno\":null,\"tipoAbrangencia\":\"M\",\"dataEleicao\":\"2016-10-02\",\"codSituacaoEleicao\":null,\"descricaoSituacaoEleicao\":null,\"descricaoEleicao\":\"2016\"},{\"id\":680,\"siglaUF\":null,\"localidadeSgUe\":null,\"ano\":2014,\"codigo\":null,\"nomeEleicao\":\"Elei\xE7\xF5es
+        Gerais 2014\",\"tipoEleicao\":\"O\",\"turno\":null,\"tipoAbrangencia\":\"F\",\"dataEleicao\":\"2014-10-05\",\"codSituacaoEleicao\":null,\"descricaoSituacaoEleicao\":null,\"descricaoEleicao\":\"2014\"},{\"id\":1699,\"siglaUF\":null,\"localidadeSgUe\":null,\"ano\":2012,\"codigo\":null,\"nomeEleicao\":\"Elei\xE7\xE3o
+        Municipal 2012\",\"tipoEleicao\":\"O\",\"turno\":null,\"tipoAbrangencia\":\"M\",\"dataEleicao\":\"2012-10-07\",\"codSituacaoEleicao\":null,\"descricaoSituacaoEleicao\":null,\"descricaoEleicao\":\"2012\"},{\"id\":14417,\"siglaUF\":null,\"localidadeSgUe\":null,\"ano\":2010,\"codigo\":null,\"nomeEleicao\":\"Elei\xE7\xF5es
+        2010\",\"tipoEleicao\":\"O\",\"turno\":null,\"tipoAbrangencia\":\"F\",\"dataEleicao\":null,\"codSituacaoEleicao\":null,\"descricaoSituacaoEleicao\":null,\"descricaoEleicao\":\"2010\"},{\"id\":14422,\"siglaUF\":null,\"localidadeSgUe\":null,\"ano\":2008,\"codigo\":null,\"nomeEleicao\":\"Elei\xE7\xF5es
+        2008\",\"tipoEleicao\":\"O\",\"turno\":null,\"tipoAbrangencia\":\"M\",\"dataEleicao\":\"2008-10-05\",\"codSituacaoEleicao\":null,\"descricaoSituacaoEleicao\":null,\"descricaoEleicao\":\"2008\"},{\"id\":14423,\"siglaUF\":null,\"localidadeSgUe\":null,\"ano\":2006,\"codigo\":null,\"nomeEleicao\":\"Elei\xE7\xF5es
+        2006\",\"tipoEleicao\":\"O\",\"turno\":null,\"tipoAbrangencia\":\"F\",\"dataEleicao\":null,\"codSituacaoEleicao\":null,\"descricaoSituacaoEleicao\":null,\"descricaoEleicao\":\"2006\"},{\"id\":14431,\"siglaUF\":null,\"localidadeSgUe\":null,\"ano\":2004,\"codigo\":null,\"nomeEleicao\":\"Elei\xE7\xF5es
+        2004\",\"tipoEleicao\":\"O\",\"turno\":null,\"tipoAbrangencia\":\"M\",\"dataEleicao\":null,\"codSituacaoEleicao\":null,\"descricaoSituacaoEleicao\":null,\"descricaoEleicao\":\"2004\"}]"
+    headers:
+      Content-Security-Policy:
+      - 'default-src https:; script-src https: ''unsafe-inline'' ''unsafe-eval'';
+        img-src https: data: blob:; font-src https: data:; style-src https: ''unsafe-inline'';
+        frame-ancestors https://*.tre-ap.jus.br https://*.tse.jus.br https://*.tre-sp.jus.br;'
+      Content-Type:
+      - application/json
+      Date:
+      - Thu, 09 Apr 2026 20:30:15 GMT
+      Referrer-Policy:
+      - strict-origin
+      Set-Cookie:
+      - _d8a23=cb69eccb04f214d8; Path=/
+      - TS017cf7a1=0103a0ceae25400abde75de4f63f44cf49a3482fd72d03b14b2af98ff4cb969f97a7c8fb499e1d38384c39cd98ce42cc08141b23321b26e9faf876a6251487257d5daeae95;
+        Path=/; Secure; HttpOnly
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding
+      X-Content-Type-Options:
+      - nosniff
+      X-Permitted-Cross-Domain-Policies:
+      - master only
+      X-XSS-Protection:
+      - 1; mode=block
+      content-length:
+      - '3338'
+    status:
+      code: 200
+      message: OK
+version: 1
