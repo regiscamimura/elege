@@ -3,7 +3,7 @@ import os
 import pytest
 import vcr
 
-from legislature.services.camara_api import CamaraClient, HTTPBackend
+from entities.services.camara_api import CamaraClient, HTTPBackend
 
 CASSETTES_DIR = os.path.join(os.path.dirname(__file__), "cassettes")
 

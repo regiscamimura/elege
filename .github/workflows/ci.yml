@@ -42,7 +42,7 @@ jobs:
       - uses: actions/checkout@v4
       - uses: astral-sh/setup-uv@v5
       - run: uv sync --dev
-      - run: uv run pytest entities/ legislature/ tests/ -v
+      - run: uv run pytest -v
 
   migrations:
     runs-on: ubuntu-latest

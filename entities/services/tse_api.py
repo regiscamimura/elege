@@ -8,7 +8,7 @@ REQUEST_DELAY = 0.5
 
 
 class TSEBackend(Protocol):
-    def get(self, path: str) -> dict[str, Any]: ...
+    def get(self, path: str) -> Any: ...
 
 
 class HTTPBackend:
@@ -17,7 +17,7 @@ class HTTPBackend:
         self.delay = delay
         self.session = requests.Session()
 
-    def get(self, path: str) -> dict[str, Any]:
+    def get(self, path: str) -> Any:
         time.sleep(self.delay)
         response = self.session.get(f"{self.base_url}{path}")
         response.raise_for_status()

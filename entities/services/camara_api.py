@@ -2,15 +2,16 @@ import time
 from typing import Any, Protocol
 
 import requests
+from requests.adapters import HTTPAdapter
+from urllib3.util.retry import Retry
 
 BASE_URL = "https://dadosabertos.camara.leg.br/api/v2"
 REQUEST_DELAY = 0.3
+RETRY_STATUSES = (500, 502, 503, 504)
 
 
 class CamaraBackend(Protocol):
-    def get(
-        self, path: str, params: dict[str, Any] | None = None
-    ) -> dict[str, Any]: ...
+    def get(self, path: str, params: dict[str, Any] | None = None) -> Any: ...
 
 
 class HTTPBackend:
@@ -18,8 +19,16 @@ class HTTPBackend:
         self.base_url = base_url
         self.delay = delay
         self.session = requests.Session()
+        retry = Retry(
+            total=4,
+            backoff_factor=2,
+            status_forcelist=RETRY_STATUSES,
+            allowed_methods=["GET"],
+            raise_on_status=False,
+        )
+        self.session.mount("https://", HTTPAdapter(max_retries=retry))
 
-    def get(self, path: str, params: dict[str, Any] | None = None) -> dict[str, Any]:
+    def get(self, path: str, params: dict[str, Any] | None = None) -> Any:
         time.sleep(self.delay)
         response = self.session.get(f"{self.base_url}{path}", params=params)
         response.raise_for_status()
@@ -29,6 +38,10 @@ class HTTPBackend:
 class CamaraClient:
     def __init__(self, backend: CamaraBackend | None = None) -> None:
         self.backend: CamaraBackend = backend or HTTPBackend()
+
+    def get_legislature(self, legislature_id: int) -> dict[str, Any]:
+        data = self.backend.get(f"/legislaturas/{legislature_id}")
+        return data.get("dados", {})
 
     def list_deputies(
         self, uf: str | None = None, legislature_id: int | None = None
@@ -65,7 +78,12 @@ class CamaraClient:
         return data.get("dados", {})
 
     def get_votes(self, session_id: str) -> list[dict[str, Any]]:
-        data = self.backend.get(f"/votacoes/{session_id}/votos")
+        try:
+            data = self.backend.get(f"/votacoes/{session_id}/votos")
+        except requests.HTTPError as e:
+            if e.response is not None and e.response.status_code == 404:
+                return []
+            raise
         return data.get("dados", [])
 
     def get_proposition(self, proposition_id: int) -> dict[str, Any]:

@@ -84,12 +84,21 @@ FAKE_CANDIDATE_DETAIL_2 = {
     "eleicoesAnteriores": [],
 }
 
+FAKE_LEGISLATURE = {
+    "id": 57,
+    "uri": "https://dadosabertos.camara.leg.br/api/v2/legislaturas/57",
+    "dataInicio": "2023-02-01",
+    "dataFim": "2027-01-31",
+}
+
 FAKE_VOTE_SESSION = {
     "id": "2162116-169",
     "uri": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2162116-169",
     "data": "2026-04-08",
     "dataHoraRegistro": "2026-04-08T20:27:11",
     "siglaOrgao": "PLEN",
+    "proposicaoObjeto": "PL 1234/2025",
+    "uriProposicaoObjeto": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2162116",
     "descricao": "Aprovado o PL 1234/2025 sobre educação infantil",
     "aprovacao": 1,
 }
@@ -147,7 +156,12 @@ class DummyCamaraBackend:
         self.calls.append((path, params))
         if path == "/deputados":
             return {"dados": []}
+        if path == "/legislaturas/57":
+            return {"dados": FAKE_LEGISLATURE}
         if path == "/votacoes" and params:
+            page = (params or {}).get("pagina", 1)
+            if page > 1:
+                return {"dados": []}
             return {"dados": [FAKE_VOTE_SESSION]}
         if "/votos" in path:
             return {"dados": FAKE_VOTES}

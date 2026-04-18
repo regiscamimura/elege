@@ -1,6 +1,6 @@
 import pytest
 
-from legislature.services.camara_api import CamaraClient
+from entities.services.camara_api import CamaraClient
 from tests.dummy_backends import DummyCamaraBackend
 
 
